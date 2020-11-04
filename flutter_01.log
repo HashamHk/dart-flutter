@@ -1,0 +1,79 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d emulator-5554
+
+## exception
+
+NoSuchMethodError: NoSuchMethodError: The method 'group' was called on null.
+Receiver: null
+Tried calling: group(1)
+
+```
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:51:5)
+#1      licenseNotAcceptedHandler.<anonymous closure> (package:flutter_tools/src/android/gradle_errors.dart:252:23)
+#2      buildGradleApp (package:flutter_tools/src/android/gradle.dart:419:73)
+#3      _rootRunUnary (dart:async/zone.dart:1198:47)
+#4      _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#5      _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#6      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#7      Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#8      Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#9      _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#10     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#11     _DefaultProcessUtils.stream (package:flutter_tools/src/base/process.dart)
+#12     _rootRunUnary (dart:async/zone.dart:1198:47)
+#13     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#14     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#15     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#16     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#17     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#18     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#19     _rootRun (dart:async/zone.dart:1190:13)
+#20     _CustomZone.run (dart:async/zone.dart:1093:19)
+#21     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#22     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#23     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#24     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#25     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#26     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 1.23.0-18.1.pre, on Microsoft Windows [Version 10.0.18363.1139], locale en-US)
+    • Flutter version 1.23.0-18.1.pre at E:\flutter
+    • Framework revision 198df796aa (3 weeks ago), 2020-10-15 12:04:33 -0700
+    • Engine revision 1d12d82d9c
+    • Dart version 2.11.0 (build 2.11.0-213.1.beta)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 30.0.0)
+    • Android SDK at C:\Users\hasha\AppData\Local\Android\sdk
+    • Platform android-30, build-tools 30.0.0
+    • Java binary at: C:\Program Files\Java\jdk1.8.0_271\bin\java
+    • Java version Java(TM) SE Runtime Environment (build 1.8.0_271-b09)
+    ✗ Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/windows#android-setup for detailed instructions).
+
+[✓] VS Code (version 1.50.1)
+    • VS Code at C:\Users\hasha\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.16.0
+
+[✓] Connected device (5 available)
+    • ONEPLUS A5000 (mobile) • emulator-5554  • android-x86    • Android 7.1.1 (API 25)
+    • ONEPLUS A5000 (mobile) • localhost:5555 • android-x86    • Android 7.1.1 (API 25)
+    • Web Server (web)       • web-server     • web-javascript • Flutter Tools
+    • Chrome (web)           • chrome         • web-javascript • Google Chrome 86.0.4240.111
+    • Edge (web)             • edge           • web-javascript • Microsoft Edge 86.0.622.58
+
+! Doctor found issues in 2 categories.
+```

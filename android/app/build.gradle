@@ -55,7 +55,3 @@ configurations.all {
         force 'com.android.support:support-v4:27.1.0'
     }
 }
-
-// flavorName {                                            
-//                         applicationId = "com.example.fluttercalculator" 
-//                 }
